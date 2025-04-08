@@ -798,6 +798,16 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "HOLDING_new",
+          "nodeLineageTag": "077f3477-fe6d-4cc6-9163-c797b6d13bf1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
