@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Hub Model Daily"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3db29c10-7852-402e-a8df-793504d162fd"
+  }
+}
