@@ -2434,3 +2434,87 @@ relationship e06376aa-8644-4007-b056-506c23d4c9f8
 	fromColumn: NEW_ISSUE.NEW_ISSUE_THRESHOLD_DATE
 	toColumn: LocalDateTable_9271578c-3ab8-4828-b358-18a988c30993.Date
 
+relationship c05617cb-3741-4974-b3a0-54d73927335d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HOLDING_new.'Period End Date'
+	toColumn: LocalDateTable_2316ac85-319d-46f1-8721-d7275513d201.Date
+
+relationship a99c54b6-0e9f-4e59-9705-a8ea9527a970
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HOLDING_new.PRICE_DATE
+	toColumn: LocalDateTable_fafeed5c-9a2a-4e42-8c81-006e8704ba91.Date
+
+relationship 2e04ab10-c892-4528-bd9d-0f8c7242c275
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HOLDING_new.CREATED_DATETIME
+	toColumn: LocalDateTable_4c6e04ec-d91a-4ddb-bd8e-63dfa9fd7620.Date
+
+relationship 1e19110f-f3be-4e1b-bfe6-763f598d13e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HOLDING_new.MODIFIED_DATETIME
+	toColumn: LocalDateTable_87560acd-9345-46b1-9487-74490bba1e2d.Date
+
+relationship AutoDetected_6c6565e9-6876-4cc8-92e2-461dafd05112
+	fromColumn: HOLDING_new.'Instrument Identifier'
+	toColumn: INSTRUMENT_EOD_PRICE_DAILY.INSTRUMENT_IDENTIFIER
+
+relationship AutoDetected_46ab9aae-5c2b-4c36-bf0c-f6701f43c2cf
+	isActive: false
+	fromColumn: HOLDING_new.'Instrument Identifier'
+	toColumn: INSTRUMENT_TS.INSTRUMENT_IDENTIFIER
+
+relationship AutoDetected_d61077a6-971f-4061-abc1-a3d8624adbc3
+	isActive: false
+	fromColumn: HOLDING_new.'Instrument Identifier'
+	toColumn: INSTRUMENT_RISK_RANKING_DAILY.INSTRUMENT_IDENTIFIER
+
+relationship AutoDetected_eba3912d-1bd1-44d2-a028-ecaebca83afe
+	isActive: false
+	fromColumn: HOLDING_new.'Instrument Identifier'
+	toColumn: INSTRUMENT_PRICE_SPGLOBAL_DISTINCT_IDENTIFIERS.INSTRUMENT_IDENTIFIER
+
+relationship AutoDetected_31c3c141-22bc-4e07-ae51-7859608739b0
+	isActive: false
+	fromColumn: HOLDING_new.'Instrument Identifier'
+	toColumn: HOLDING_IBOXX.'Instrument Identifier'
+
+relationship AutoDetected_86956f07-7e66-4a25-9652-084d6b57be63
+	isActive: false
+	fromColumn: HOLDING_new.ID_DATE
+	toColumn: INSTRUMENT_RATING_MOODYS.ID_DATE
+
+relationship AutoDetected_4e071bae-ac9d-4fd4-ac37-1437428e7e96
+	isActive: false
+	fromColumn: HOLDING_new.ID_DATE
+	toColumn: INSTRUMENT_RATING_MPC_SPGLOBAL.ID_DATE
+
+relationship AutoDetected_9fb31665-3e02-4855-8632-3f36e8a90aaa
+	isActive: false
+	fromColumn: HOLDING_new.ID_DATE
+	toColumn: INSTRUMENT_RATING_MOODYS_WSO.ID_DATE
+
+relationship AutoDetected_7e0b7a9d-9b5a-4bc8-9926-4eb665a358bf
+	isActive: false
+	fromColumn: HOLDING_new.ID_DATE
+	toColumn: INSTRUMENT_RATING_SPGLOBAL_WSO.ID_DATE
+
+relationship AutoDetected_6bd928ec-e68d-4f57-b7f3-30b37a5cb246
+	isActive: false
+	fromColumn: HOLDING_new.ID_DATE
+	toColumn: INSTRUMENT_RATING_IBOXX.ID_DATE
+
+relationship AutoDetected_908b4797-f700-48c6-9d3b-c727a570b6da
+	fromColumn: HOLDING_new.SOURCE_SYSTEM_CODE
+	toColumn: SOURCE_SYSTEM.SOURCE_SYSTEM_CODE
+
+relationship AutoDetected_e44aedc7-eebe-43a1-8f8d-2fc5ad4f9644
+	fromColumn: HOLDING_new.PORTFOLIO_IDENTIFIER
+	toColumn: PORTFOLIO.PORTFOLIO_IDENTIFIER
+
+relationship AutoDetected_226ff7ad-d240-400b-840a-8a5218394170
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: HOLDING_new.ID_DATE_PORT
+	toColumn: HOLDING.ID_DATE_PORT
+
