@@ -65,6 +65,16 @@ table GICS_MATRIX
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'TC_GICS_INDUSTRY_CODE - new/2'
+		dataType: double
+		lineageTag: d702d834-9926-4204-8f9d-a86f3ed8174d
+		summarizeBy: none
+		sourceColumn: TC_GICS_INDUSTRY_CODE - new/2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition GICS_MATRIX = m
 		mode: import
 		source =
@@ -75,9 +85,11 @@ table GICS_MATRIX
 				    GICS_MATRIX_Table = ASSET_Schema{[Name="GICS_MATRIX",Kind="Table"]}[Data],
 				    #"Renamed Columns" = Table.RenameColumns(GICS_MATRIX_Table,{{"GICS_INDUSTRY_GROUP_NAME", "GICS Industry Group"}, {"GICS_INDUSTRY_NAME", "GICS Industry"}, {"GICS_SECTOR_NAME", "GICS Sector"}, {"GICS_SUB_INDUSTRY_NAME", "GICS Sub Industry"}}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"GICS Sub Industry", "GICS_SUB_INDUSTRY_CODE"}),
-				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns", {"GICS Industry"})
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns", {"GICS Industry"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Duplicates", "TC_GICS_INDUSTRY_CODE", "TC_GICS_INDUSTRY_CODE - Copy"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Duplicated Column",{{"TC_GICS_INDUSTRY_CODE - Copy", "TC_GICS_INDUSTRY_CODE - new/2"}})
 				in
-				    #"Removed Duplicates"
+				    #"Renamed Columns1"
 
 	annotation PBI_ResultType = Table
 
