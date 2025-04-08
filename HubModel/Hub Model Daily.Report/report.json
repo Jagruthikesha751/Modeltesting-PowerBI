@@ -234,6 +234,15 @@
           "z": 0.00
         },
         {
+          "config": "{\"name\":\"a3f3d49942b6bf497826\",\"layouts\":[{\"id\":0,\"position\":{\"x\":825.775075987842,\"y\":178.96656534954408,\"z\":2001,\"width\":425.04559270516717,\"height\":493.13069908814595,\"tabOrder\":2001}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(HOLDING_new.Accrued)\"},{\"queryRef\":\"Sum(HOLDING_new.Portfolio Holding Percent)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HOLDING_new\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Accrued\"}},\"Function\":0},\"Name\":\"Sum(HOLDING_new.Accrued)\",\"NativeReferenceName\":\"Sum of Accrued\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Portfolio Holding Percent\"}},\"Function\":0},\"Name\":\"Sum(HOLDING_new.Portfolio Holding Percent)\",\"NativeReferenceName\":\"Sum of Portfolio Holding Percent\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 493.13,
+          "width": 425.05,
+          "x": 825.78,
+          "y": 178.97,
+          "z": 2001.00
+        },
+        {
           "config": "{\"name\":\"c8c1b895fdfb02507e10\",\"layouts\":[{\"id\":0,\"position\":{\"x\":335.0841750841751,\"y\":0,\"z\":1000,\"width\":280.13468013468014,\"height\":84.04040404040404,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"HOLDING.Period End Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HOLDING\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Period End Date\"},\"Name\":\"HOLDING.Period End Date\",\"NativeReferenceName\":\"Period End Date\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Period End Date\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HOLDING\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Period End Date\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"datetime'2024-07-02T00:00:00'\"}}]]}}}]}}}}]}}}",
           "filters": "[]",
           "height": 84.04,
